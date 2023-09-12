@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Light</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+
+    <style>
+        .light {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: red;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .wrap{
+            margin-left: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="row">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="row">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="row">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="row">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="row">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+    </div>
+
+
+    <script>
+
+        const arrlight = document.querySelectorAll(".light");
+        
+        arrlight.forEach(function (e){
+            let a = setTimeout(function setColor() {
+                let randomColor = '#'+Math.floor(Math.random() * 16777215).toString(16);
+                e.style.backgroundColor = randomColor;
+                a = setTimeout(setColor, 200);
+            }, 200)
+        });
+    </script>
+</body>
+
+</html>
